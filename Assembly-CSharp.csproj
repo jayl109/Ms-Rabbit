@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\fhudvbkdjsf.cs" />
+     <Compile Include="Assets\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Scripts\BirdAggro.cs" />
      <Compile Include="Assets\Scripts\BirdScript.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
@@ -64,6 +65,7 @@
      <Compile Include="Assets\Scripts\HeartScript.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\ScoreCounter.cs" />
+     <Compile Include="Assets\Scripts\Sound.cs" />
      <Compile Include="Assets\Scripts\TreeScript.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/Jason/gdddecal/Ms. Rabbit (1)/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

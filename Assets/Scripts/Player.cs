@@ -48,6 +48,7 @@ public class Player : MonoBehaviour
 	private void Jump() {
        if (playerRB.transform.position.y <= playerY)
         {
+    
             StartCoroutine(JumpSeq());
         }
         else
@@ -59,7 +60,7 @@ public class Player : MonoBehaviour
 
     IEnumerator JumpSeq()
     {
-        Debug.Log("Jumpeddd");
+        //Debug.Log("Jumpeddd");
         anim.SetBool("Jumping", true);
         playerRB.velocity = new Vector2(playerRB.velocity.x, 0);
         Vector2 thrust = new Vector2(0, jumpforce);//thrust will be 4 times as strong in the y af it is in the x
@@ -67,7 +68,7 @@ public class Player : MonoBehaviour
         playerRB.AddForce(thrust, ForceMode2D.Force);
         yield return new WaitForSeconds(.1f);
         yield return new WaitUntil(() => (playerRB.transform.position.y <= playerY));
-        Debug.Log("jumping is false");
+        //Debug.Log("jumping is false");
         anim.SetBool("Jumping", false);
     }
 

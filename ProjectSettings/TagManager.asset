@@ -8,6 +8,7 @@ TagManager:
   - ScoreCounter
   - FinalScore
   - ScoreText
+  - AudioManager
   layers:
   - Default
   - TransparentFX

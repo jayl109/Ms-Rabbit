@@ -10,7 +10,7 @@ public class HeartScript : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Heart Boost!");
-           
+            FindObjectOfType<AudioManager>().Play("PlayerPickup");
             GameObject.Find("ScoreCounter").GetComponent<ScoreCounter>().Boost(boostAmountDividedBy2);
             Destroy(this.gameObject);
         }

@@ -26,7 +26,7 @@ public class BirdScript : MonoBehaviour
         }
     }
     public void Dive() {
-    	Debug.Log("rotating");
+    	//Debug.Log("rotating");
 		transform.eulerAngles = new Vector3(
     			transform.eulerAngles.x,
     			transform.eulerAngles.y,
@@ -35,7 +35,7 @@ public class BirdScript : MonoBehaviour
 	}
 
 	private void Update() {
-		Debug.Log(transform.position.y);
+		//Debug.Log(transform.position.y);
 		if (transform.position.x < despawnX) {
 			Destroy(gameObject);
 			return;
@@ -48,7 +48,7 @@ public class BirdScript : MonoBehaviour
 		} else {
 			//stop diving
 			if (transform.position.y < stopDivingY) {
-				Debug.Log("Stop diving");
+				//Debug.Log("Stop diving");
 				diving = false;
 				transform.eulerAngles = new Vector3(
 								    				transform.eulerAngles.x,
@@ -58,7 +58,7 @@ public class BirdScript : MonoBehaviour
 
 				transform.Translate(Vector2.left * Time.deltaTime*flyingSpeed);
 			} else {
-				Debug.Log("Keep diving");
+				//Debug.Log("Keep diving");
 				//keep diving
 				transform.Translate(new Vector2(-1,0) * Time.deltaTime*divingSpeed);
 

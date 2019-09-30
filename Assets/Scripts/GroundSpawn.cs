@@ -33,7 +33,7 @@ public class GroundSpawn : MonoBehaviour
     public float skyY;
 	public float treeY = 1.13f;
 	private float spawnTreeAt = 0f;
-    private float spawnHeartAt = 5f;
+    public float spawnHeartAt = 5f;
     private float spawnHeartCooldown = 5f;
 	private float spawnTreeCooldown = 10f;
 
@@ -43,7 +43,7 @@ public class GroundSpawn : MonoBehaviour
     void Start()
     {
     	moveAt = (groundLen * 1.1f);
-    	Debug.Log("moveAt: " + moveAt);
+    	//Debug.Log("moveAt: " + moveAt);
 
     	ground2 = Instantiate(groundprefab, new Vector3(ground.transform.position.x + groundLen, 0, 0), Quaternion.identity);
     	ground3 = Instantiate(groundprefab, new Vector3(ground.transform.position.x + groundLen + groundLen, 0, 0), Quaternion.identity);
@@ -81,30 +81,30 @@ public class GroundSpawn : MonoBehaviour
     	sky4 = temp2; 
     }
     void SpawnTree() {
-    	Debug.Log("spawn tree");
+    	//Debug.Log("spawn tree");
 		float spawnTreeDist = Random.Range(0,2);
 		GameObject spawned = Instantiate(tree, new Vector3(spawnTreeAt+spawnTreeDist+10, treeY, 0), Quaternion.identity);
 		spawned.transform.position = new Vector3(spawnTreeAt+spawnTreeDist+10, treeY, 0);
-		Debug.Log("final spawn pos: " + (spawnTreeAt+spawnTreeDist+10) + "spawn tree at: " + spawnTreeAt + "spawn tree dist at :" + spawnTreeDist);
+		//Debug.Log("final spawn pos: " + (spawnTreeAt+spawnTreeDist+10) + "spawn tree at: " + spawnTreeAt + "spawn tree dist at :" + spawnTreeDist);
 
-		Debug.Log(spawned.transform.position);
+		//Debug.Log(spawned.transform.position);
     }
     void SpawnBird() {
-    	Debug.Log("spawn bird");
+    	//Debug.Log("spawn bird");
     	//too hard to make it not impossible
 		float spawnBirdDist = Random.Range(0,5);
 		GameObject spawned = Instantiate(birdPrefab, new Vector3(spawnTreeAt+spawnBirdDist+30, birdY, 0), Quaternion.identity);
 		spawned.transform.position = new Vector3(spawnTreeAt+spawnBirdDist+30, birdY, 0);
-		Debug.Log("final spawn pos: " + (spawnTreeAt+spawnBirdDist+10) + "spawn bird at: " + spawnTreeAt + "spawn bird dist at :" + spawnBirdDist);
+		//Debug.Log("final spawn pos: " + (spawnTreeAt+spawnBirdDist+10) + "spawn bird at: " + spawnTreeAt + "spawn bird dist at :" + spawnBirdDist);
 
-		Debug.Log(spawned.transform.position);
+		//Debug.Log(spawned.transform.position);
     }
     // Update is called once per frame
     void Update()
     {
     	//spawn ground
     	if (player.transform.position.x > moveAt) {
-    		Debug.Log("move ground");
+    		//Debug.Log("move ground");
     		moveGroundAndSky();
     		
             moveAt += groundLen; 

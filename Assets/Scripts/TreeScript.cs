@@ -8,7 +8,7 @@ public class TreeScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("touched tree!");
+            //Debug.Log("touched tree!");
             collision.transform.GetComponent<Player>().Die();
             GameObject.Find("ScoreCounter").GetComponent<ScoreCounter>().Died();
         }
